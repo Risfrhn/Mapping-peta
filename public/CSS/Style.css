@@ -1,0 +1,86 @@
+body {
+    background: white;
+    font-family: 'Poppins', sans-serif;
+}
+.sidebar {
+    position: fixed;
+    min-height: 100vh;
+    width: 80px;   
+    background: rgb(250, 250, 255);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.sidebar.expanded {
+    width: 300px;   /* expanded size */
+}
+
+.sidebar .nav-link {
+    color: #adb5bd;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top:15px;
+    padding-bottom:15px;
+    white-space: nowrap;
+}
+
+
+.sidebar .nav-link:hover {
+    background: #495057;
+    color: white;
+}
+
+
+.sidebar .link-text {
+    display: none;
+}
+.sidebar.expanded .link-text {
+    display: inline;
+    
+}
+
+.sidebar.collapsed .box-card {
+    border: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background-color: white !important;
+}
+.sidebar.collapsed .box-card .col-9 {
+    display: none !important;
+}
+
+.sidebar.collapsed .sidebar-component {
+    display: none !important;
+}
+
+.sidebar.expanded .toggle-btn{
+    display: none !important;
+}
+
+/* === Laptop ke atas (lg) sidebar selalu expanded === */
+@media (min-width: 992px) {
+    .sidebar {
+        width: 300px !important;
+    }
+    #main-content {
+        margin-left: 300px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    #main-content {
+        margin-left: 80px !important;
+    }
+}
+
+#map {
+    height: 500px; /* ukuran peta */
+    width: 100%;
+}
