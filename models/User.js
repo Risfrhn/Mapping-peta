@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['Admin', 'worker'], // hanya bisa Admin atau worker
+    enum: ['Admin', 'Worker'], // hanya bisa Admin atau worker
     required: true,
   }
 });
