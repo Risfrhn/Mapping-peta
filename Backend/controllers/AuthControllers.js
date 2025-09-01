@@ -12,7 +12,7 @@ exports.register = async (req, res) => {
       role: req.body.role
     });
     await user.save();
-    res.redirect("/login")
+
     res.status(201).json({ message: "User registered successfully" });
   } catch (err) {
     res.status(400).json({ error: err.message });

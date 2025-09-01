@@ -1,7 +1,4 @@
-body {
-    background: white;
-    font-family: 'Poppins', sans-serif;
-}
+
 .sidebar {
     position: fixed;
     min-height: 100vh;
@@ -78,9 +75,4 @@ body {
     #main-content {
         margin-left: 80px !important;
     }
-}
-
-#map {
-    height: 500px; /* ukuran peta */
-    width: 100%;
 }
